@@ -1,0 +1,394 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%; /* 16px (12pt) default font size | 1em is 100% default font size */
+    color: #000000;
+}
+
+h1{
+    padding-bottom: 10px;
+    font-size: 2.25em; /* 36px / 16px = 2.25em or 225%  */
+    font-weight: normal;
+}
+
+h2{
+    padding-bottom: 10px;
+    font-size: 2.125em; /* 34px */
+    font-weight: normal;
+}
+
+h3{
+    padding-bottom: 10px;
+    font-size: 2em; /* 32px */
+    font-weight: normal;
+}
+
+p{
+    padding-bottom: 10px;
+    line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay + content */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+a,
+a:visited {
+  color: rgb(253, 105, 0);
+}
+.hero-content {
+    
+
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.749);
+  color: #ffbf00;
+
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: center;
+  padding: 2rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    background-color: #000000;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    
+   display: flex;
+   align-items: center;
+   gap: 20px;
+    height:100px;
+    padding: 20px 10px;
+    background-color: #000000;
+}
+header h3{
+    color: #ffffff;
+    padding: 10px 0px;
+
+    font-size: 16px;
+    
+}
+
+nav{
+    position: sticky;
+    background-color: #f7b01a;
+    padding: 20px;
+    flex: 1 0 100%;
+}
+
+nav ul{
+    position: sticky;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* margin-bottom: 0; */
+}
+
+nav a:link, nav a:visited{
+    background-color: #000000;
+    text-decoration: none;
+    color: #fff;
+    /* width: 150px; */
+    display: block;
+    padding: 20px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a:active{
+    background-color: #ff0000;
+}
+
+/* Rotating banner */
+.banner {
+   width: 100%;
+  max-width: 1900px; 
+  height: 600px;    
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slide 8s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;  
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(0); }
+
+  36%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-100%); }
+
+  69%  { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+main{
+    background-color:whitesmoke;
+    font-size: 45px;
+    text-align: center;
+    flex: 1 0 70%; /* 800px - target / context = result */
+    padding: 100px 10px 50px 10px;
+    font-size: 20px;
+}
+
+main h1{
+    align-items: left;
+    font-size: 80px;
+    text-align: center;
+    line-height: normal;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ed6623;
+}
+    
+.portfolio h1{
+  font-size: 80px;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ed6623;
+}
+/* Portfolio grid */
+.portfolio {
+    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Portfolio item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image */
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay */
+.portfolio-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover animation */
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.container{
+    text-align: left;
+    line-height: normal;
+}
+
+
+
+.about {
+  text-align: left;
+
+ max-width: 900px;   
+  margin: 0 auto;     /
+}
+
+aside{
+    padding-top: 400px;
+    h1{
+        color:#f7b01a;
+    }
+    background-color: rgb(0, 0, 0);
+    color:white;
+    flex: 1 1 30%; /* 400px - target / context (1200) = result */
+    padding: 5px 10px;
+}
+
+footer{
+    background-color:#7B542F;
+    color:white;
+    flex: 1 0 100%;
+    padding: 10px;
+}
+
+
+/* media queries for tablet screens 800px or smaller */
+@media screen and (max-width: 800px){
+     .portfolio {
+    grid-template-columns:1fr 1fr;
+ }
+
+    body{
+        background-color: #333;
+    }
+
+    header{
+        
+        height: 100px;
+        background-image: url(../images/header-md.png);
+    }
+
+    nav a:link, nav a:visited{
+    
+        padding: 10px 20px;
+        margin-right: 20px;
+    
+}
+
+.banner{
+   width: 100%;
+  max-width: 800px; 
+  height: 360px;    
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+main{
+
+    flex: 1 1 80%; 
+}
+
+aside{
+    flex: 1 1 20%; 
+
+}
+
+} 
+
+/* media queries for mobile screens 600px or smaller */
+@media screen and (max-width: 600px){
+ .portfolio {
+    align-items: center;
+    grid-template-columns: 1fr;
+ }
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+
+    header{
+        
+        height: 50px;
+        background-image: url(../images/header-sm.png);
+        
+    }
+    .banner {
+   width: 100%;
+  max-width: 650px; 
+  height: 180px;    
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+    .container{
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    nav a:link, nav a:visited{
+
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+main, aside{
+    padding: 20px;
+}
+
+
+footer{
+    text-align: center;
+
+}
+
+}
