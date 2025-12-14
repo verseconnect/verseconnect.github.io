@@ -309,7 +309,7 @@ footer{
     header{
         
         height: 100px;
-        background-image: url(../images/header-md.png);
+    
     }
 
     nav a:link, nav a:visited{
@@ -352,7 +352,6 @@ aside{
     header{
         
         height: 50px;
-        background-image: url(../images/header-sm.png);
         
     }
     .banner {
